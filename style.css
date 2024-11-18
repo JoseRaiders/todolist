@@ -1,0 +1,137 @@
+body {
+  max-width: 1440px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Figtree", arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #121212;
+  background-color: #f4d04e;
+}
+
+.page {
+  max-width: 384px;
+  max-height: 522px;
+  background-color: #fff;
+  margin: 219px auto;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #111;
+  box-shadow: 10px 10px #121212;
+}
+
+.header__image {
+  display: block;
+  margin: 0 auto 24px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.content {
+  max-width: 384px;
+}
+
+.category__button {
+  background-color: #f4d04e;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family: "Figtree Extra Bold", arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+}
+
+.category__publish {
+  margin: 12px 0;
+  font-family: "Figtree Medium", arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.category__title {
+  font-family: "Figtree Extra Bold", arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.category__title:hover {
+  color: #f4d04e;
+  transition: all 2s ease-out;
+}
+
+.category__description {
+  color: #6b6b6b;
+  font-family: "Figtree Medium", arial, sans-serif;
+  font-size: 16px;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.author__container {
+  display: flex;
+  gap: 12px;
+}
+
+.author__image {
+  width: 32px;
+  height: 32px;
+}
+
+.author__name {
+  align-content: center;
+  font-family: "Figtree Extra Bold", arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .page {
+    max-width: 327px;
+    max-height: 501px;
+    background-color: #fff;
+    margin: 156px 24px;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #111;
+    box-shadow: 10px 10px #121212;
+  }
+
+  .header__image {
+    object-fit: cover;
+    max-width: 279px;
+    height: 200px;
+  }
+
+  .content {
+    max-width: 279px;
+  }
+
+  .category__button {
+    font-size: 12px;
+  }
+
+  .category__publish {
+    font-size: 12px;
+  }
+
+  .category__title {
+    font-size: 20px;
+  }
+
+  .category__description {
+    font-size: 14px;
+  }
+}
