@@ -1,0 +1,194 @@
+@import url(../vendor/normalize.css);
+
+body {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Lato", arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #303841;
+  background-color: #f6c90e;
+}
+
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page__section {
+  max-width: 544px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  text-align: center;
+}
+
+.header__span-accent {
+  display: block;
+  font-family: "Playfair Display", arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 72px;
+  color: #eee;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #3a4750;
+  width: 544px;
+  border-radius: 10px;
+  box-shadow: 10px 10px #121;
+  margin: 10px auto;
+  padding: 8px;
+}
+
+.nav__logo {
+  width: 65px;
+  height: auto;
+  position: relative;
+  margin: 10px auto 20px;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 40px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  color: #eee;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.nav__link:hover {
+  color: #f6c90e;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.item__add-button {
+  background: transparent url(../images/add-icon.svg) center no-repeat;
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  border: 2px solid #eee;
+}
+
+.item__add-button:hover {
+  cursor: pointer;
+  opacity: 60%;
+  transition: 0.02s;
+  border: 2px solid #3a4750;
+}
+
+.tile {
+  margin-top: 20px;
+}
+
+.tile__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* .card__description {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 25px 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 900;
+  font-family: "Inter", Arial, sans-serif;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__like-button {
+  background: transparent url(../images/like-disabled.svg) center no-repeat;
+  width: 21px;
+  height: 18px;
+  border: none;
+  margin: 0;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.card__like-button_active {
+  background-image: url(../images/like-active.svg);
+}
+
+.card__like-button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.card__delete-button {
+  background: transparent url(../images/rubbish.svg) center no-repeat;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 18px;
+  height: 19px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card__delete-button:hover {
+  opacity: 60%;
+  cursor: pointer;
+} */
+
+.footer {
+  margin: 35px auto 20px;
+  text-align: center;
+}
+
+/* my colors:
+dark grey: #303841
+grey: #3A4750
+yellow: #F6C90E
+light grey: #EEEEEE
+ref: https://colorhunt.co/palette/3038413a4750f6c90eeeeeee
+*/
