@@ -38,10 +38,9 @@ Users should be able to:
 
 ### What I learned
 
-This challenge (although seem small to some) has helped me to improve my coding skills by building realistic projects.
+This app (although small to some) has helped me to improve my coding skills by building a realistic project.
 
 ## Author
 
 - GitHub - [JoseRaiders](https://github.com/JoseRaiders)
 - X - [@nukajose](https://x.com/nukajose)
-
