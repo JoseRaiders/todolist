@@ -46,6 +46,7 @@
         <section class="item content__section">
           <button
             class="item__add-button"
+            id="item-add-button"
             type="button"
             aria-label="Add list button"
           ></button>
@@ -58,9 +59,9 @@
                   type="checkbox"
                   class="tile__checkbox"
                   id="check"
-                  name=""
+                  name="checkbox"
                 />
-                <label class="tile__description" for=""
+                <label class="tile__description" for="checkbox"
                   >Lorem ipsum odor amet, consectetuer adipiscing elit. Metus
                   natoque lorem morbi tempus malesuada sit suscipit. Porta
                   primis nascetur odio sem id netus himenaeos sem. Phasellus
@@ -89,7 +90,7 @@
     </div>
 
     <!-- Add tile modal -->
-    <div class="modal" id="add-tite-modal">
+    <div class="modal" id="add-tile-modal">
       <div class="modal__container">
         <button class="modal__close" id="tile-edit-close"></button>
         <h2 class="modal__heading">Add task</h2>
@@ -100,7 +101,7 @@
               class="modal__input"
               id="modal-tile-input"
               name="task"
-              placeholder="Add your task here"
+              placeholder="Add task here"
               required
               autocapitalize="sentences"
               minlength="5"
@@ -119,8 +120,13 @@
     <template id="tile-template">
       <li class="tile">
         <div class="tile__content">
-          <input type="checkbox" class="tile__checkbox" id="check" name="" />
-          <label class="tile__description" for=""> </label>
+          <input
+            type="checkbox"
+            class="tile__checkbox"
+            id="check"
+            name="checkbox"
+          />
+          <label class="tile__description" for="checkbox"> </label>
         </div>
         <div class="tile__buttons">
           <button
