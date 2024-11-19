@@ -30,7 +30,9 @@
           <img src="/android-chrome-512x512.png" alt="TDL" class="nav__logo" />
           <ul class="nav__links">
             <li>
-              <a class="nav__link" href="#">How To</a>
+              <button class="nav__link nav__howto" id="howto-button">
+                How To
+              </button>
             </li>
             <li>
               <a class="nav__link" href="#">By Nuk</a>
@@ -89,6 +91,33 @@
       </footer>
     </div>
 
+    <!-- How to modal -->
+    <div class="modal" id="howto-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="howto-close"></button>
+        <h2 class="modal__heading">How to</h2>
+        <div class="modal__body">
+          <h3 class="modal__subheading">Add tasks to your list</h3>
+          <p class="modal__detail">
+            &dash; Click on the Add task icon (+) symbol
+          </p>
+          <h3 class="modal__subheading">
+            Marking tasks as complete on your list
+          </h3>
+          <p class="modal__detail">
+            &dash; Click on the Add task icon (+) symbol
+          </p>
+          <h3 class="modal__subheading">Edit tasks on your list</h3>
+          <p class="modal__detail">
+            &dash; Click on the Add task icon (+) symbol
+          </p>
+          <h3 class="modal__subheading">Delete tasks on your list</h3>
+          <p class="modal__detail">
+            &dash; Click on the Add task icon (+) symbol
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Add tile modal -->
     <div class="modal" id="add-tile-modal">
       <div class="modal__container">

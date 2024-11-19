@@ -80,6 +80,16 @@ body {
   line-height: 1.2;
 }
 
+.nav__howto {
+  display: inline;
+  color: #f6c90e;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+}
+
 .nav__link:hover {
   color: #eee;
 }
@@ -226,6 +236,8 @@ body {
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .modal__container {
@@ -263,10 +275,18 @@ body {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 900;
-  font-family: "Inter", Arial, sans-serif;
   color: #303841;
   text-align: left;
-  margin: 0 0 45px;
+  margin: 0 0 40px;
+}
+
+.modal__subheading {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #303841;
+  text-align: left;
+  margin: 0 0 20px;
 }
 
 .modal__form {
@@ -281,7 +301,6 @@ body {
   color: #303841;
   font-size: 14px;
   line-height: 1.2;
-  font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -293,6 +312,12 @@ body {
 
 .modal__input:focus {
   outline: none;
+}
+
+.modal__detail {
+  color: #303841;
+  padding: 0 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .modal__button {
@@ -317,34 +342,6 @@ body {
 }
 
 /* styles for small to large smartphones */
-/* @media screen and (max-width: 600px) and (min-width: 320px) {
-  .modal__container {
-    width: 282px;
-    padding: 25px 22px;
-  }
-  .modal__close {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-color: transparent;
-    bottom: calc(100% + 20px);
-    left: calc(100% - 30px);
-    border: none;
-    background-image: url(../images/mobile-close.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .modal__heading {
-    font-size: 18px;
-    line-height: 1.1;
-    text-align: left;
-    margin: 0 0 75px;
-  }
-  .modal__button {
-    margin: 45px 0 0;
-  }
-} */
-
 @media only screen and (max-width: 600px) {
   .page {
     display: flex;
@@ -394,6 +391,34 @@ body {
 
   .footer__content {
     padding: 0 20px;
+  }
+
+  .modal__container {
+    width: 282px;
+    padding: 25px 22px;
+  }
+
+  .modal__close {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    bottom: calc(100% + 10px);
+    left: calc(100% - 25px);
+    border: none;
+    background-image: url(../images/mobile-close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .modal__heading {
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0 0 40px;
+  }
+
+  .modal__button {
+    margin: 45px 0 0;
   }
 }
 

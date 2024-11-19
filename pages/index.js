@@ -10,6 +10,12 @@ const initialTiles = [
 /*=============================================
 =                  Elements                   =
 =============================================*/
+// how to modal
+const howtoBtn = document.querySelector("#howto-button");
+const howtoModal = document.querySelector("#howto-modal");
+const howtoCloseBtn = document.querySelector("#howto-close");
+
+// tile add button modal
 const tileAddBtn = document.querySelector("#item-add-button");
 const tileAddModal = document.querySelector("#add-tile-modal");
 const tileCloseBtn = document.querySelector("#tile-edit-close");
@@ -17,12 +23,12 @@ const tileCloseBtn = document.querySelector("#tile-edit-close");
 /*=============================================
 =                 Functions                   =
 =============================================*/
-function fillTileForm() {
-  tileAddModal.classList.add("modal_opened");
+function openPopup(modal) {
+  modal.classList.add("modal_opened");
 }
 
-function closePopup() {
-  tileAddModal.classList.remove("modal_opened");
+function closePopup(modal) {
+  modal.classList.remove("modal_opened");
 }
 
 // function getCardElement(data) {
@@ -53,6 +59,8 @@ function closePopup() {
 /*=============================================
 =              Event Listeners                =
 =============================================*/
-tileAddBtn.addEventListener("click", fillTileForm);
-tileCloseBtn.addEventListener("click", closePopup);
-// profileEditForm.addEventListener("submit", handleProfileFormSubmit);
+howtoBtn.addEventListener("click", () => openPopup(howtoModal));
+howtoCloseBtn.addEventListener("click", () => closePopup(howtoModal));
+
+tileAddBtn.addEventListener("click", () => openPopup(tileAddModal));
+tileCloseBtn.addEventListener("click", () => closePopup(tileAddModal));
