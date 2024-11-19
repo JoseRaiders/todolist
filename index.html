@@ -9,7 +9,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +30,7 @@
           <img src="/android-chrome-512x512.png" alt="TDL" class="nav__logo" />
           <ul class="nav__links">
             <li>
-              <a class="nav__link" href="#">How-to</a>
+              <a class="nav__link" href="#">How To</a>
             </li>
             <li>
               <a class="nav__link" href="#">By Nuk</a>
@@ -40,25 +39,52 @@
         </nav>
         <h1 class="header__title">
           <span class="header__span-accent">To Do List</span>
-          Your Life
+          keep your life in check
         </h1>
       </header>
       <main class="content">
-        <section class="item page__section">
+        <section class="item content__section">
           <button
             class="item__add-button"
             type="button"
             aria-label="Add list button"
           ></button>
         </section>
-        <section class="tile page__section">
-          <ul class="tile__list"></ul>
+        <section class="tiles content__section">
+          <ul class="tile__list">
+            <li class="tile">
+              <div class="tile__content">
+                <input
+                  type="checkbox"
+                  class="tile__checkbox"
+                  id="check"
+                  name=""
+                />
+                <label class="tile__description" for=""
+                  >Lorem ipsum odor amet, consectetuer adipiscing elit. Metus
+                  natoque lorem morbi tempus malesuada sit suscipit. Porta
+                  primis nascetur odio sem id netus himenaeos sem. Phasellus
+                  gravida ultricies ante tellus commodo efficitur.
+                </label>
+              </div>
+              <div class="tile__buttons">
+                <button
+                  class="tile__edit-button"
+                  type="button"
+                  aria-label="Edit task button"
+                ></button>
+                <button
+                  class="tile__delete-button"
+                  type="button"
+                  aria-label="Delete task button"
+                ></button>
+              </div>
+            </li>
+          </ul>
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__content">
-          <p class="footer__copyright">&#169; 2024 Anuska Jose</p>
-        </div>
+        <p class="footer__copyright">&#169; 2024 Anuska Jose</p>
       </footer>
     </div>
 
@@ -107,5 +133,6 @@
         </div>
       </li>
     </template>
+    <script src="./pages/index.js" type="module" defer></script>
   </body>
 </html>
