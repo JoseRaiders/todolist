@@ -92,19 +92,19 @@
     <div class="modal" id="add-tite-modal">
       <div class="modal__container">
         <button class="modal__close" id="tile-edit-close"></button>
-        <h2 class="modal__heading">Add Task</h2>
+        <h2 class="modal__heading">Add task</h2>
         <form class="modal__form" name="tile-form">
           <div class="modal__label">
             <input
               type="text"
               class="modal__input"
-              id="modal-tile-task"
+              id="modal-tile-input"
               name="task"
               placeholder="Add your task here"
               required
               autocapitalize="sentences"
               minlength="5"
-              maxlength="200"
+              maxlength="150"
             />
             <span class="modal__input-error" id="modal-tile-task-error"></span>
           </div>
@@ -118,21 +118,25 @@
     <!-- tite template -->
     <template id="tile-template">
       <li class="tile">
-        <button
-          class="tile__delete-button"
-          type="button"
-          aria-label="Delete button"
-        ></button>
-        <div class="tile__description">
-          <h2 class="tite__title"></h2>
+        <div class="tile__content">
+          <input type="checkbox" class="tile__checkbox" id="check" name="" />
+          <label class="tile__description" for=""> </label>
+        </div>
+        <div class="tile__buttons">
           <button
-            class="tile__complete-button"
+            class="tile__edit-button"
             type="button"
-            aria-label="Complete button"
+            aria-label="Edit task button"
+          ></button>
+          <button
+            class="tile__delete-button"
+            type="button"
+            aria-label="Delete task button"
           ></button>
         </div>
       </li>
     </template>
+
     <script src="./pages/index.js" type="module" defer></script>
   </body>
 </html>

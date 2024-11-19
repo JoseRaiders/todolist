@@ -1,1 +1,2 @@
-console.log("hello");
+const initialTile = {};
+console.log(initialTile);
