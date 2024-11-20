@@ -1,0 +1,26 @@
+.header__title {
+  max-width: 544px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 35px;
+  margin: 20px auto 0;
+  padding: 0;
+}
+
+.header__span-accent {
+  display: block;
+  font-family: "Playfair Display", arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 72px;
+  color: #f6c90e;
+}
+
+/* styles for small to large smartphones */
+@media only screen and (max-width: 600px) {
+  .header__title {
+    width: 100%;
+    text-align: center;
+  }
+}

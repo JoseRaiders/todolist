@@ -1,0 +1,12 @@
+.footer {
+  margin: 35px auto 20px;
+  text-align: center;
+}
+
+/* styles for small to large smartphones */
+@media only screen and (max-width: 600px) {
+  .footer {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -16,9 +16,9 @@ const howtoModal = document.querySelector("#howto-modal");
 const howtoCloseBtn = document.querySelector("#howto-close");
 
 // tile add button modal
-const tileAddBtn = document.querySelector("#item-add-button");
-const tileAddModal = document.querySelector("#add-tile-modal");
-const tileCloseBtn = document.querySelector("#tile-edit-close");
+const tileAddBtn = document.querySelector("#task-add-button");
+const tileAddModal = document.querySelector("#add-task-modal");
+const tileCloseBtn = document.querySelector("#task-edit-close");
 
 /*=============================================
 =                 Functions                   =

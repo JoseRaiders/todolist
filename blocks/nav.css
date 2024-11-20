@@ -1,0 +1,62 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #3a4750;
+  width: 544px;
+  border-radius: 10px;
+  box-shadow: 10px 10px #121;
+  margin: 10px auto;
+  padding: 8px;
+}
+
+.nav__logo {
+  width: 65px;
+  height: auto;
+  position: relative;
+  margin: 10px auto 20px;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 40px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  color: #f6c90e;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.nav__howto {
+  display: inline;
+  color: #f6c90e;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.nav__link:hover {
+  color: #eee;
+}
+
+/* styles for small to large smartphones */
+@media only screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #3a4750;
+    width: 100%;
+    margin: 10px auto;
+    padding: 8px 0;
+  }
+}

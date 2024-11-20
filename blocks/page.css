@@ -1,0 +1,36 @@
+.page {
+  background-color: #303841;
+  font-family: "Lato", arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+.page__content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__section {
+  max-width: 1280px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* styles for small to large smartphones */
+@media only screen and (max-width: 600px) {
+  .page {
+    padding: 0 20px;
+  }
+
+  .page__section {
+    padding: 0;
+  }
+}

@@ -1,0 +1,117 @@
+.tile__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tile {
+  position: relative;
+  background-color: #f6c90e;
+  color: #303841;
+  width: 520px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.tile__content {
+  display: flex;
+}
+
+.tile__description {
+  max-width: 445px;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.tile__checkbox {
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+
+.tile__checkbox:checked {
+  accent-color: #3a4750;
+}
+
+.tile__edit-button {
+  background: transparent url(../images/edit-icon.svg) center no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  width: 18px;
+  height: 20px;
+  border: none;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.tile__delete-button {
+  background: transparent url(../images/rubbish.svg) center no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.tile__edit-button:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.tile__delete-button:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+/* styles for small to large smartphones */
+@media only screen and (max-width: 600px) {
+  .tile {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .tile__content {
+    flex-wrap: wrap;
+  }
+
+  .tile__description {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+
+  .tile__edit-button,
+  .tile__delete-button {
+    position: static;
+    display: inline;
+    margin-top: 5px;
+    padding: 12px;
+  }
+
+  .tile__edit-button:hover,
+  .tile__delete-button:hover {
+    opacity: 60%;
+    cursor: pointer;
+  }
+}

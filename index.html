@@ -25,70 +25,76 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">
-        <nav class="nav">
-          <img src="/android-chrome-512x512.png" alt="TDL" class="nav__logo" />
-          <ul class="nav__links">
-            <li>
-              <button class="nav__link nav__howto" id="howto-button">
-                How To
-              </button>
-            </li>
-            <li>
-              <a class="nav__link" href="#">By Nuk</a>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="header__title">
-          <span class="header__span-accent">To Do List</span>
-          keep your life in check
-        </h1>
-      </header>
-      <main class="content">
-        <section class="item content__section">
-          <button
-            class="item__add-button"
-            id="item-add-button"
-            type="button"
-            aria-label="Add list button"
-          ></button>
-        </section>
-        <section class="tiles content__section">
-          <ul class="tile__list">
-            <li class="tile">
-              <div class="tile__content">
-                <input
-                  type="checkbox"
-                  class="tile__checkbox"
-                  id="check"
-                  name="checkbox"
-                />
-                <label class="tile__description" for="checkbox"
-                  >Lorem ipsum odor amet, consectetuer adipiscing elit. Metus
-                  natoque lorem morbi tempus malesuada sit suscipit. Porta
-                  primis nascetur odio sem id netus himenaeos sem. Phasellus
-                  gravida ultricies ante tellus commodo efficitur.
-                </label>
-              </div>
-              <div class="tile__buttons">
-                <button
-                  class="tile__edit-button"
-                  type="button"
-                  aria-label="Edit task button"
-                ></button>
-                <button
-                  class="tile__delete-button"
-                  type="button"
-                  aria-label="Delete task button"
-                ></button>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">&#169; 2024 Anuska Jose</p>
-      </footer>
+      <div class="page__content">
+        <header class="header page__section">
+          <nav class="nav">
+            <img
+              src="/android-chrome-512x512.png"
+              alt="TDL"
+              class="nav__logo"
+            />
+            <ul class="nav__links">
+              <li>
+                <button class="nav__link nav__howto" id="howto-button">
+                  How To
+                </button>
+              </li>
+              <li>
+                <a class="nav__link" href="#">By Nuk</a>
+              </li>
+            </ul>
+          </nav>
+          <h1 class="header__title">
+            <span class="header__span-accent">To Do List</span>
+            keep your life in check
+          </h1>
+        </header>
+        <main class="content">
+          <section class="task page__section">
+            <button
+              class="task__add-button"
+              id="task-add-button"
+              type="button"
+              aria-label="Add list button"
+            ></button>
+          </section>
+          <section class="tiles page__section">
+            <ul class="tile__list">
+              <li class="tile">
+                <div class="tile__content">
+                  <input
+                    type="checkbox"
+                    class="tile__checkbox"
+                    id="check"
+                    name="checkbox"
+                  />
+                  <label class="tile__description" for="checkbox"
+                    >Lorem ipsum odor amet, consectetuer adipiscing elit. Metus
+                    natoque lorem morbi tempus malesuada sit suscipit. Porta
+                    primis nascetur odio sem id netus himenaeos sem. Phasellus
+                    gravida ultricies ante tellus commodo efficitur.
+                  </label>
+                </div>
+                <div class="tile__buttons">
+                  <button
+                    class="tile__edit-button"
+                    type="button"
+                    aria-label="Edit task button"
+                  ></button>
+                  <button
+                    class="tile__delete-button"
+                    type="button"
+                    aria-label="Delete task button"
+                  ></button>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </main>
+        <footer class="footer">
+          <p class="footer__copyright">&#169; 2024 Anuska Jose</p>
+        </footer>
+      </div>
     </div>
 
     <!-- How to modal -->
@@ -97,33 +103,29 @@
         <button class="modal__close" id="howto-close"></button>
         <h2 class="modal__heading">How to</h2>
         <div class="modal__body">
-          <h3 class="modal__subheading">Add tasks to your list</h3>
+          <h3 class="modal__subheading">Add tasks</h3>
           <p class="modal__detail">
-            &dash; Click on the Add task icon (+) symbol
+            &dash; Click on the Add task button (+) symbol
           </p>
-          <h3 class="modal__subheading">
-            Marking tasks as complete on your list
-          </h3>
+          <h3 class="modal__subheading">Mark tasks as complete</h3>
+          <p class="modal__detail">&dash; Click on the task checkbox(es)</p>
+          <h3 class="modal__subheading">Edit tasks</h3>
           <p class="modal__detail">
-            &dash; Click on the Add task icon (+) symbol
+            &dash; Click on the pencil icon within the task
           </p>
-          <h3 class="modal__subheading">Edit tasks on your list</h3>
+          <h3 class="modal__subheading">Delete tasks</h3>
           <p class="modal__detail">
-            &dash; Click on the Add task icon (+) symbol
-          </p>
-          <h3 class="modal__subheading">Delete tasks on your list</h3>
-          <p class="modal__detail">
-            &dash; Click on the Add task icon (+) symbol
+            &dash; Click on the bin icon within the task
           </p>
         </div>
       </div>
     </div>
     <!-- Add tile modal -->
-    <div class="modal" id="add-tile-modal">
+    <div class="modal" id="add-task-modal">
       <div class="modal__container">
-        <button class="modal__close" id="tile-edit-close"></button>
+        <button class="modal__close" id="task-edit-close"></button>
         <h2 class="modal__heading">Add task</h2>
-        <form class="modal__form" name="tile-form">
+        <form class="modal__form" name="task-form">
           <div class="modal__label">
             <input
               type="text"

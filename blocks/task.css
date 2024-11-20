@@ -1,0 +1,31 @@
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 20px;
+}
+
+.task__add-button {
+  background: transparent url(../images/add-icon.svg) center no-repeat;
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  border: 2px solid #f6c90e;
+  margin: 0;
+  padding: 0;
+}
+
+.task__add-button:hover {
+  cursor: pointer;
+  opacity: 60%;
+  transition: 0.02s;
+  border: 2px solid #eee;
+}
+
+/* styles for small to large smartphones */
+@media only screen and (max-width: 600px) {
+  .task__add-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
