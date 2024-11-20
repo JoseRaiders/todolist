@@ -15,14 +15,20 @@ const howtoBtn = document.querySelector("#howto-button");
 const howtoModal = document.querySelector("#howto-modal");
 const howtoCloseBtn = document.querySelector("#howto-close");
 
-// tile add button modal
-const tileAddBtn = document.querySelector("#task-add-button");
-const tileAddModal = document.querySelector("#add-task-modal");
-const tileCloseBtn = document.querySelector("#task-edit-close");
+// task add button modal
+const taskAddBtn = document.querySelector("#task-add-button");
+const taskAddModal = document.querySelector("#add-task-modal");
+const taskCloseBtn = document.querySelector("#task-edit-close");
+
+// task save button
+const taskAddForm = taskAddModal.querySelector(".modal__form");
+const tileList = document.querySelector(".tile__list");
+const tileTemplate = document.querySelector("#tile-template").content;
 
 /*=============================================
 =                 Functions                   =
 =============================================*/
+// open and close modals
 function openPopup(modal) {
   modal.classList.add("modal_opened");
 }
@@ -31,30 +37,34 @@ function closePopup(modal) {
   modal.classList.remove("modal_opened");
 }
 
-// function getCardElement(data) {
-//   const cardElement = cardTemplate.cloneNode(true);
-//   const cardImageElement = cardElement.querySelector(".card__image");
-//   const cardTitleElement = cardElement.querySelector(".card__title");
-//   cardImageElement.src = data.link;
-//   cardImageElement.alt = data.name;
-//   cardTitleElement.textContent = data.name;
-//   return cardElement;
-// }
+// create task tile
+function createTile(task) {
+  const newTile = tileTemplate.cloneNode(true);
+  newTile.querySelector(".tile__description").textContent = task;
+  return newTile;
+}
 
-// initialTiles.forEach((data) => {
-//   const tileElement = getCardElement(data);
-//   cardListElement.append(tileElement);
-// });
+function renderTile(task) {
+  const tileElement = createTile(task);
+  tileList.appendChild(tileElement);
+}
+
+function taskSubmit(evt) {
+  evt.preventDefault();
+  const taskInput = taskAddForm.querySelector("#modal-tile-input");
+  const taskValue = taskInput.value.trim();
+
+  if (taskValue) {
+    renderTile(taskValue); // add the new tile
+    taskInput.value = ""; // clear the input field
+    closePopup(taskAddModal); // close the modal
+  }
+}
 
 /*=============================================
-=              Event Handlers                 =
+=           Initial Tile Rendering            =
 =============================================*/
-// function handleProfileFormSubmit(evt) {
-//   evt.preventDefault();
-//   profileTitle.textContent = profileTitleInput.value;
-//   profileDescription.textContent = profileDescriptionInput.value;
-//   closePopup();
-// }
+initialTiles.forEach((tile) => renderTile(tile.task));
 
 /*=============================================
 =              Event Listeners                =
@@ -62,5 +72,7 @@ function closePopup(modal) {
 howtoBtn.addEventListener("click", () => openPopup(howtoModal));
 howtoCloseBtn.addEventListener("click", () => closePopup(howtoModal));
 
-tileAddBtn.addEventListener("click", () => openPopup(tileAddModal));
-tileCloseBtn.addEventListener("click", () => closePopup(tileAddModal));
+taskAddBtn.addEventListener("click", () => openPopup(taskAddModal));
+taskCloseBtn.addEventListener("click", () => closePopup(taskAddModal));
+
+taskAddForm.addEventListener("submit", taskSubmit);

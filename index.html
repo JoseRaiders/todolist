@@ -59,39 +59,10 @@
             ></button>
           </section>
           <section class="tiles page__section">
-            <ul class="tile__list">
-              <li class="tile">
-                <div class="tile__content">
-                  <input
-                    type="checkbox"
-                    class="tile__checkbox"
-                    id="check"
-                    name="checkbox"
-                  />
-                  <label class="tile__description" for="checkbox"
-                    >Lorem ipsum odor amet, consectetuer adipiscing elit. Metus
-                    natoque lorem morbi tempus malesuada sit suscipit. Porta
-                    primis nascetur odio sem id netus himenaeos sem. Phasellus
-                    gravida ultricies ante tellus commodo efficitur.
-                  </label>
-                </div>
-                <div class="tile__buttons">
-                  <button
-                    class="tile__edit-button"
-                    type="button"
-                    aria-label="Edit task button"
-                  ></button>
-                  <button
-                    class="tile__delete-button"
-                    type="button"
-                    aria-label="Delete task button"
-                  ></button>
-                </div>
-              </li>
-            </ul>
+            <ul class="tile__list"></ul>
           </section>
         </main>
-        <footer class="footer">
+        <footer class="footer page__section">
           <p class="footer__copyright">&#169; 2024 Anuska Jose</p>
         </footer>
       </div>
@@ -135,19 +106,24 @@
               placeholder="Add task here"
               required
               autocapitalize="sentences"
-              minlength="5"
+              minlength="4"
               maxlength="150"
             />
             <span class="modal__input-error" id="modal-tile-task-error"></span>
           </div>
-          <button type="submit" class="modal__button" aria-label="Save button">
+          <button
+            type="submit"
+            class="modal__button"
+            id="task-save-button"
+            aria-label="Save button"
+          >
             Save
           </button>
         </form>
       </div>
     </div>
 
-    <!-- tite template -->
+    <!-- tile template -->
     <template id="tile-template">
       <li class="tile">
         <div class="tile__content">
@@ -157,7 +133,7 @@
             id="check"
             name="checkbox"
           />
-          <label class="tile__description" for="checkbox"> </label>
+          <label class="tile__description" for="checkbox"></label>
         </div>
         <div class="tile__buttons">
           <button
