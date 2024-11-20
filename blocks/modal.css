@@ -17,6 +17,14 @@
   transition: opacity 0.3s ease;
 }
 
+.modal__container,
+.modal__heading,
+.modal__subheading,
+.modal__input,
+.modal__button {
+  font-family: "Lato", arial, sans-serif;
+}
+
 .modal__container {
   position: relative;
   width: 430px;
@@ -114,7 +122,6 @@
   color: #eee;
   font-size: 18px;
   line-height: 1.1;
-  font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
 }
 
