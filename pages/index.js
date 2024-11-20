@@ -52,7 +52,7 @@ function renderTile(task) {
 function taskSubmit(evt) {
   evt.preventDefault();
   const taskInput = taskAddForm.querySelector("#modal-tile-input");
-  const taskValue = taskInput.value.trim();
+  const taskValue = taskInput.value.trim(); // remove whitespaces from both sides of the string
 
   if (taskValue) {
     renderTile(taskValue); // add the new tile
